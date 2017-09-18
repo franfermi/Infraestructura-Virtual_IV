@@ -1,6 +1,6 @@
 # **Práctica 0**: *Git y GitHub para entrega de hitos del proyecto*.
 
-##Creación de par de claves y subida de clave pública a GitHub.
+## Creación de par de claves y subida de clave pública a GitHub.
 
 Para la creación de par de claves, escribimos desde nuestro terminal el siguiente comando:
 
@@ -19,10 +19,7 @@ Para comprobar que funciona correctamente realizamos una conexión mediante ssh,
 
 `ssh -T git@github.com`
 
-##Configuración correcta del nombre y correo electrónico para que aparezca en los commits.
+## Configuración correcta del nombre y correo electrónico para que aparezca en los commits.
 
-##Edición del perfil en GitHub para que aparezca nombre completo y ciudad, así como universidad.
+## Edición del perfil en GitHub para que aparezca nombre completo y ciudad, así como universidad.
 
-##
-
-##
