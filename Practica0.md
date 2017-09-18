@@ -9,7 +9,7 @@ Para la creación de par de claves, escribimos desde nuestro terminal el siguien
 Se nos pedirá el lugar donde queremos almacenar el archivo que contendrá
 nuestra clave, por defecto se almacena en /home/<nombre_usuario>/.ssh/id_rsa.
 
-!/Capturas/clave_generada.png
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/clave_generada.png)
 
 Para subir nuestra clave pública a GitHub, mostramos el contenido de dicha clave que se encuentra en la ruta anterior para posteriormente copiarlo a nuestra cuenta GitHub.
 
