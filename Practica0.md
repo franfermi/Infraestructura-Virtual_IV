@@ -58,3 +58,18 @@ Ya podemos subir nuestros archivos de la siguiente forma:
 `git add Practica0.md`
 `git commit -m "Subida Practica0, actualizacion 1"`
 `git push origin hito0`
+
+## Creación y cierre de milestones e issues
+
+En primer lugar creamos nuestro primer Milestones, en mi caso será la entrega de la práctica 0 de la asignatura junto con la fecha de subida.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/crear_milestone.png)
+
+Posteriormente creamos issues asociados a nuestro milestones, que serán como tareas a realizar para completar el desarrollo de la entrega.
+Conforme completemos cada issues, lo cerramos para incrementar el porcentaje a realizar para la finalización de la práctica.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/cierre_issue.png)
+
+Una vez cerrado el issue, en la web se mostrará lo siguiente:
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/cierre_issue_web.png)
