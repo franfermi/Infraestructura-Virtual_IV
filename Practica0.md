@@ -26,6 +26,7 @@ Para comprobar que funciona correctamente realizamos una conexión mediante ssh,
 Para configurar el nombre y correo electrónico de nuestra cuenta de GitHub para que aparezca en los commit usaríamos:
 
 `git config --global user.name "Francisco Fernández Millán"`
+
 `git config --global user.email "franfermi@correo.ugr.es"`
 
 ## Edición del perfil en GitHub para que aparezca nombre completo y ciudad, así como universidad.
@@ -56,7 +57,9 @@ Una vez creada, cambiamos a dicha rama y comprobamos que nos encontramos en hito
 Ya podemos subir nuestros archivos de la siguiente forma:
 
 `git add Practica0.md`
+
 `git commit -m "Subida Practica0, actualizacion 1"`
+
 `git push origin hito0`
 
 ## Creación y cierre de milestones e issues
