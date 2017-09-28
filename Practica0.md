@@ -6,7 +6,7 @@ Para la creación de par de claves, escribimos desde nuestro terminal el siguien
 
 `ssh-keygen -t rsa -C "franfermi@correo.ugr.es"`
 
-Se nos pedirá el lugar donde queremos almacenar el archivo que contendrá nuestra clave, por defecto se almacena en /home/<nombre_usuario>/.ssh/id_rsa.
+Se nos pedirá el lugar donde queremos almacenar el archivo que contendrá nuestra clave, por defecto se almacena en /home/<nombre_usuario>/.ssh/id_rsa. 
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/clave_generada.png)
 
