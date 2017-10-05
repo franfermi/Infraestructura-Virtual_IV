@@ -10,7 +10,7 @@ Se nos pedirá el lugar donde queremos almacenar el archivo que contendrá nuest
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/hito0/Capturas/clave_generada.png)
 
-Para subir nuestra clave pública a GitHub, mostramos el contenido de dicha clave que se encuentra en la ruta anterior para posteriormente copiarlo a nuestra cuenta GitHub.
+Para subir nuestra clave pública a GitHub, mostramos el contenido de dicha clave que se encuentra en la ruta anterior para posteriormente copiarlo a nuestra cuenta GitHub.  
 
 `cat id_rsa.pub`
 
