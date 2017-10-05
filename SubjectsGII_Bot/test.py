@@ -5,7 +5,7 @@ import unittest
 import metodosBD
 
 class TestMetodos(unittest.TestCase):
-
+"""
     """ Test que comprueba que una asignatura está disponible """
     def test_asig_disponible(self, nombAsig):
         num_asig = metodosBD.nombreAsignatura(nombAsig)
@@ -30,6 +30,6 @@ class TestMetodos(unittest.TestCase):
     def test_mostrarAsig_disponibles(self):
         filas = metodosBD.mostrarAsigDisponibles()
         self.assertNotEqual(filas, 0)
-
+"""
 if __name__ == '__main__':
    unittest.main()

@@ -7,11 +7,17 @@ import urlparse
 
 db = os.environ["NAME_BD"]
 host_db = os.environ["HOST_BD"]
-usuario = os.environ["USER_BD"]
-pw = os.environ["PW_BD"]
+user_bd = os.environ["USER_BD"]
+pw_bd = os.environ["PW_BD"]
 
+def conexionBD():
+    connect_db = psycopg2.connect(database=bd, user=user_bd, password=pw_db, host=host_bd)
+    cursor = connect_db.cursor()
+
+    return cursor
+"""
 def nombreAsignatura(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
     cursor = connect_db.cursor()
     cursor.execute(nombAsig)
 
@@ -25,7 +31,7 @@ def nombreAsignatura(nombAsig):
     return False
 
 def guiaDocenteDisponible(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
     cursor = connect_db.cursor()
     #cursor.execute(SELECT guia_docente FROM Asignaturas WHERE asignatura = nombAsig)
 
@@ -39,7 +45,7 @@ def guiaDocenteDisponible(nombAsig):
     return False
 
 def fechaExamenDisponible(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
     cursor = connect_db.cursor()
     #cursor.execute(SELECT fecha_examen FROM Asignaturas WHERE asignatura = nombAsig)
 
@@ -53,7 +59,7 @@ def fechaExamenDisponible(nombAsig):
     return False
 
 def numeroAsigDisponibles():
-    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
     cursor = connect_db.cursor()
     #cursor.execute(SELECT * FROM Asignaturas)
 
@@ -64,7 +70,7 @@ def numeroAsigDisponibles():
     return num_asignaturas
 
 def mostrarAsigDisponibles():
-    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
     cursor = connect_db.cursor()
     #cursor.execute(SELECT asignatura FROM Asignaturas)
 
