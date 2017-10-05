@@ -1,8 +1,8 @@
 install:
-				sudo pip install -r requirements.txt
+	pip install -r requirements.txt
 
 test:
-			cd SubjectsGII_Bot && python test.py
+	cd SubjectsGII_Bot && python test.py
 
 ejecutar:
-			cd SubjectsGII_Bot && python SubjectsGII_Bot.py
+	cd SubjectsGII_Bot && python SubjectsGII_Bot.py
