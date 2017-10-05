@@ -3,17 +3,17 @@ import metodosBD
 
 class TestMetodos(unittest.TestCase):
 
-    """ Test que comprueba que una asignatura está disponible """
+    """ Test que comprueba que una asignatura esta disponible """
     def test_asig_disponible(self, nombAsig):
         num_asig = metodosBD.nombreAsignatura(nombAsig)
         self.assertTrue(num_asig)
 
-    """ Test que comprueba que la guía docente está disponible """
+    """ Test que comprueba que la guía docente esta disponible """
     def test_guia_disponible(self, nombAsig):
         num_guia = metodosBD.guiaDocenteDisponible(nombAsig)
         self.assertTrue(num_guia)
 
-    """ Test que comprueba que la fecha exámen está disponible """
+    """ Test que comprueba que la fecha exámen esta disponible """
     def test_fechaEx_disponible(self, nombAsig):
         num_fecha = metodosBD.fechaExamenDisponible(nombAsig)
         self.assertTrue(num_fecha)
