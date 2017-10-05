@@ -2,9 +2,38 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import math
 #import metodosBD
 
+def devuelveTrue():
+    return True
+
+def cuadrado(a):
+    if(not(type(a)is int)):
+        return -1
+    else:
+        return a**2;
+
+def raiz(a):
+    if(not(type(a)is int)):
+        return -1
+    elif a >= 0:
+        return math.sqrt(a)
+    else:
+        raise ValueError, "a debe ser >= 0"
+
 class TestMetodos(unittest.TestCase):
+
+    def testDevuelveTrue(self):
+        self.assertTrue(devuelveTrue(), "Es True")
+
+    def testCuadrado(self):
+        self.assertEqual(cuadrado(2), 4, "El cuadrado de 2 es 4")
+        #self.assertEqual(cuadrado(3), 6, "El cuadrado de 3 NO es 6")
+
+    def testRaiz(self):
+        self.assertEqual(raiz(9), 3, "La raiz de 9 es 3")
+        #self.assertEqual(raiz(-1), IndexError)
 
     """ Test que comprueba que una asignatura está disponible
     def test_asig_disponible(self, nombAsig):
