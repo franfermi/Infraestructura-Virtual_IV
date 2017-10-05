@@ -10,7 +10,7 @@ host_db = os.environ["HOST_BD"]
 user_bd = os.environ["USER_BD"]
 pw_bd = os.environ["PW_BD"]
 
-def conexionBD():
+def conexionBD(): 
     connect_db = psycopg2.connect(database=bd, user=user_bd, password=pw_db, host=host_bd)
     cursor = connect_db.cursor()
 
