@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import metodosBD
+#import metodosBD
 
 class TestMetodos(unittest.TestCase):
 
