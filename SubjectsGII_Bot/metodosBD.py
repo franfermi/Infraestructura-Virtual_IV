@@ -23,7 +23,7 @@ def nombreAsignatura(nombAsig):
     connect_db.close()
 
     return False
-
+"""
 def guiaDocenteDisponible(nombAsig):
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
@@ -51,7 +51,7 @@ def fechaExamenDisponible(nombAsig):
     connect_db.close()
 
     return False
-
+"""
 def numeroAsigDisponibles():
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
