@@ -23,11 +23,11 @@ def nombreAsignatura(nombAsig):
     connect_db.close()
 
     return False
-"""
+
 def guiaDocenteDisponible(nombAsig):
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
-    cursor.execute(SELECT guia_docente FROM Asignaturas WHERE asignatura = nombAsig)
+    #cursor.execute(SELECT guia_docente FROM Asignaturas WHERE asignatura = nombAsig)
 
     num_guia = len(cursor.fetchall())
 
@@ -41,7 +41,7 @@ def guiaDocenteDisponible(nombAsig):
 def fechaExamenDisponible(nombAsig):
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
-    cursor.execute(SELECT fecha_examen FROM Asignaturas WHERE asignatura = nombAsig)
+    #cursor.execute(SELECT fecha_examen FROM Asignaturas WHERE asignatura = nombAsig)
 
     num_fecha = len(cursor.fetchall())
 
@@ -51,11 +51,11 @@ def fechaExamenDisponible(nombAsig):
     connect_db.close()
 
     return False
-"""
+
 def numeroAsigDisponibles():
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
-    cursor.execute(SELECT * FROM Asignaturas)
+    #cursor.execute(SELECT * FROM Asignaturas)
 
     num_asignaturas = len(cursor.fetchall())
 
@@ -66,7 +66,7 @@ def numeroAsigDisponibles():
 def mostrarAsigDisponibles():
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
-    cursor.execute(SELECT asignatura FROM Asignaturas)
+    #cursor.execute(SELECT asignatura FROM Asignaturas)
 
     filas = len(cursor.fetchall())
 
