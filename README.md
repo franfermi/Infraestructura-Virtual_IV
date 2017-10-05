@@ -14,11 +14,9 @@ El proyecto que voy a realizar trata de un bot desarrollado en Python, que mostr
 
 Debido a que el desarrollo se realizará en Python, necesitaremos las librerías, API o framework correspondiente.
 
-Los datos sobre cada una de las asignaturas de alojarán en una base de datos de software libre.
+Los datos sobre cada una de las asignaturas de alojarán en algún sitio.
 
 ## Servicios
-
-* Servidor en la nube como Azure, Amazon Web Service...
 
 * Base de datos MySQL.
 
