@@ -22,7 +22,7 @@ def nombreAsignatura(nombAsig):
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT * FROM subjectsgii WHERE asignatura = %s", [asig])
+    #cursor.execute("SELECT * FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_asig = len(cursor.fetchall())
 
@@ -31,14 +31,14 @@ def nombreAsignatura(nombAsig):
 
     connect_db.close()
 
-    return False 
+    return False
 
 def guiaDocenteDisponible(nombAsig):
     connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT guia_docente FROM subjectsgii WHERE asignatura = %s", [asig])
+    #cursor.execute("SELECT guia_docente FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_guia = len(cursor.fetchall())
 
@@ -54,7 +54,7 @@ def fechaExamenDisponible(nombAsig):
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT fecha_examen FROM subjectsgii WHERE asignatura = %s", [asig])
+    #cursor.execute("SELECT fecha_examen FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_fecha = len(cursor.fetchall())
 
@@ -68,7 +68,7 @@ def fechaExamenDisponible(nombAsig):
 def numeroAsigDisponibles():
     connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    cursor.execute("SELECT * FROM subjectsgii")
+    #cursor.execute("SELECT * FROM subjectsgii")
 
     num_asignaturas = len(cursor.fetchall())
 
@@ -79,7 +79,7 @@ def numeroAsigDisponibles():
 def mostrarAsigDisponibles():
     connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    cursor.execute("SELECT asignatura FROM subjectsgii")
+    #cursor.execute("SELECT asignatura FROM subjectsgii")
 
     filas = len(cursor.fetchall())
 
