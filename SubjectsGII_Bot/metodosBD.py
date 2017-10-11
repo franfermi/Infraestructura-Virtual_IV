@@ -31,7 +31,7 @@ def nombreAsignatura(nombAsig):
 
     connect_db.close()
 
-    return False
+    return False 
 
 def guiaDocenteDisponible(nombAsig):
     connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
@@ -89,4 +89,3 @@ def mostrarAsigDisponibles():
     connect_db.close()
 
     return asigs
-
