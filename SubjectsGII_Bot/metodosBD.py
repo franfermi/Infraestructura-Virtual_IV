@@ -1,25 +1,28 @@
 #!/bin/usr/python
 # -*- coding: utf-8 -*-
 
-import psycopg2
+import psycopg2, psycopg2.extras
 import os
-import urlparse
+#import urlparse
 
-db = os.environ["NAME_BD"]
-host_db = os.environ["HOST_BD"]
-user_bd = os.environ["USER_BD"]
-pw_bd = os.environ["PW_BD"]
+#db = os.environ["NAME_BD"]
+#host_db = os.environ["HOST_BD"]
+#user_bd = os.environ["USER_BD"]
+#pw_bd = os.environ["PW_BD"]
 
-def conexionBD(): 
-    connect_db = psycopg2.connect(database=bd, user=user_bd, password=pw_db, host=host_bd)
+
+def conexionBD():
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
 
     return cursor
-"""
+
 def nombreAsignatura(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    cursor.execute(nombAsig)
+    asig = nombAsig
+
+    cursor.execute("SELECT * FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_asig = len(cursor.fetchall())
 
@@ -31,9 +34,11 @@ def nombreAsignatura(nombAsig):
     return False
 
 def guiaDocenteDisponible(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    #cursor.execute(SELECT guia_docente FROM Asignaturas WHERE asignatura = nombAsig)
+    asig = nombAsig
+
+    cursor.execute("SELECT guia_docente FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_guia = len(cursor.fetchall())
 
@@ -45,9 +50,11 @@ def guiaDocenteDisponible(nombAsig):
     return False
 
 def fechaExamenDisponible(nombAsig):
-    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    #cursor.execute(SELECT fecha_examen FROM Asignaturas WHERE asignatura = nombAsig)
+    asig = nombAsig
+
+    cursor.execute("SELECT fecha_examen FROM subjectsgii WHERE asignatura = %s", [asig])
 
     num_fecha = len(cursor.fetchall())
 
@@ -59,9 +66,9 @@ def fechaExamenDisponible(nombAsig):
     return False
 
 def numeroAsigDisponibles():
-    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    #cursor.execute(SELECT * FROM Asignaturas)
+    cursor.execute("SELECT * FROM subjectsgii")
 
     num_asignaturas = len(cursor.fetchall())
 
@@ -70,9 +77,9 @@ def numeroAsigDisponibles():
     return num_asignaturas
 
 def mostrarAsigDisponibles():
-    connect_db = psycopg2.connect(database=db, user=user_bd, password=pw_bd, host=host_db)
+    connect_db = psycopg2.connect(dbname='postgres', user='postgres', password='12345', host='localhost')
     cursor = connect_db.cursor()
-    #cursor.execute(SELECT asignatura FROM Asignaturas)
+    cursor.execute("SELECT asignatura FROM subjectsgii")
 
     filas = len(cursor.fetchall())
 
@@ -82,3 +89,4 @@ def mostrarAsigDisponibles():
     connect_db.close()
 
     return asigs
+
