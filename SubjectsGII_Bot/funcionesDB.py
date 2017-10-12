@@ -33,7 +33,7 @@ def guiaDocenteDisponible(nombAsig):
     asig = nombAsig
 
     #cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignatura = %s", [asig])
-    cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignatura = 'SE'")
+    cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignaturas = 'SE'")
 
     num_guia = len(cursor.fetchall())
 
@@ -49,7 +49,7 @@ def fechaExamenDisponible(nombAsig):
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT fecha_examen FROM AsignaturasGII WHERE asignatura = 'CPD'")
+    cursor.execute("SELECT fecha_examen FROM AsignaturasGII WHERE asignaturas = 'CPD'")
 
     num_fecha = len(cursor.fetchall())
 
