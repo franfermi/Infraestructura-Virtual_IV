@@ -1,7 +1,6 @@
 #!/bin/usr/python
 # -*- coding: utf-8 -*-
 
-import psycopg2, psycopg2.extras
 import os
 import sqlite3
 #import urlparse
