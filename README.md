@@ -14,7 +14,7 @@ El proyecto que voy a realizar trata de un bot desarrollado en Python, que mostr
 
 ## Requerimientos
 
-Debido a que el desarrollo se realizará en Python, necesitaremos las librerías, API o framework correspondiente.
+Debido a que el desarrollo se realizará en Python, necesitaremos las librerías, API o framework correspondientes.
 
 Los datos sobre cada una de las asignaturas de alojarán en algún sitio.
 
