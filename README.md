@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/franfermi/Infraestructura-Virtual_IV.svg?branch=master)](https://travis-ci.org/franfermi/Infraestructura-Virtual_IV)
+
 # SubjectsGII_Bot
 
 ## Descripción general
@@ -21,3 +23,11 @@ Los datos sobre cada una de las asignaturas de alojarán en algún sitio.
 * Base de datos SQLite.
 
 * API Bot Telegram para la comunicación.
+
+## Automatización
+
+He realizado un fichero *Makefile* que se encargará de automatizar el proceso.
+
+## Integración continua
+
+El sistema de integración continua que he utilizado es *Travis-CI*, enlazado con mi cuenta de GitHub. Este sistema comprueba de forma continua cada cambio que es realizado en el repositorio para que todo funcione correctamente. Su fichero de configuración es *.travis.yml*.
