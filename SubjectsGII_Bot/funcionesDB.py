@@ -16,7 +16,7 @@ def nombreAsignatura(nombAsig):
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT * FROM AsignaturasGII WHERE asignaturas = 'DBAS'")
+    cursor.execute("SELECT * FROM AsignaturasGII WHERE asignaturas = 'DBA'")
 
     num_asig = len(cursor.fetchall())
 
