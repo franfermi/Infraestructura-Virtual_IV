@@ -1,15 +1,30 @@
-#!/bin/usr/python
 # -*- coding: utf-8 -*-
 
 import os
-#import urlparse
-import funcionesDB
-import sqlite3
+import telebot
+import metodosBD
 
-#Prueba de conexión y respuesta de la BD
-respuesta = funcionesDB.nombreAsignatura("DBA")
+TOKEN = '410202267:AAHv1ZMs9N3paHMzsYQG1ZnPvzWVwKeGnJs'
+#TOKEN = os.environ['TOKEN']
+bot = telebot.TeleBot(TOKEN)
 
-if respuesta is False:
-    print ("La asignatura no se encuentra en la BD")
-else:
-    print ("Asignatura encontrada")
+def listener(messages):
+    for m in messages:
+        if m.content_type == 'text':
+            chat_id = m.chat.id
+            print ("[" + str(chat_id) + "]: " + m.text)
+bot.set_update_listener(listener)
+
+@bot.message_handler(commands=['hola'])
+def comando_hola(message):
+    """Función de bienvenida al bot de Telegram. """
+    chat_id = message.chat.id
+    bot.send_message(chat_id, "Bienvenid@ al canal de SubjectsGII")
+
+@bot.message_handler(commands=['adios'])
+def comando_hola(message):
+    """Función de despedida del bot de Telegram. """
+    chat_id = message.chat.id
+    bot.send_message(chat_id, "Hasta pronto!")
+
+bot.polling(none_stop=True)
