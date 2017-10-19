@@ -2,10 +2,9 @@
 
 import os
 import telebot
-import metodosBD
+import funcionesDB
 
-TOKEN = '410202267:AAHv1ZMs9N3paHMzsYQG1ZnPvzWVwKeGnJs'
-#TOKEN = os.environ['TOKEN']
+TOKEN = os.environ['TOKEN']
 bot = telebot.TeleBot(TOKEN)
 
 def listener(messages):
