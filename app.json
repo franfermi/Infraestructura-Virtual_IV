@@ -1,0 +1,10 @@
+{
+  "name": "SubjectsGII_Bot",
+  "description": "Bot de telegram que te muestra información sobre asignaturas de GII",
+  "image": "heroku/python",
+  "logo": "",
+  "website": "https://franfermi.github.io/Infraestructura-Virtual_IV/",
+  "repository": "https://github.com/franfermi/Infraestructura-Virtual_IV",
+  "keywords": ["python", "bot", "telegram", "etsiit", "gii"]
+
+}
