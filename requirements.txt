@@ -1,2 +1,4 @@
 pyTelegramBotAPI>=3.2.1
 python-telegram-bot>=2.5
+Flask==0.11.1
+gunicorn==19.7.1
