@@ -1,6 +1,7 @@
 from flask import Flask, request
 from SubjectsGII_Bot.funcionesDB import *
 from flask_restful import Resource, Api
+import json
 
 app = Flask(__name__)
 api = Api(app)
