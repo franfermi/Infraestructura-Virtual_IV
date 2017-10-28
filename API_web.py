@@ -1,7 +1,10 @@
-from flask import Flask, request
-from SubjectsGII_Bot.funcionesDB import *
-from flask_restful import Resource, Api
-import json
+#from flask import Flask, request
+#from SubjectsGII_Bot.funcionesDB import *
+#from flask_restful import Resource, Api
+#import json
+
+from flask import Flask
+from flask_restful import Api 
 
 app = Flask(__name__)
 api = Api(app)
