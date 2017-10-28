@@ -1,2 +1,2 @@
-worker: cd SubjectsGII_Bot && python SubjectsGII_Bot.py
-web: gunicorn API_web:app --log-file -
+worker: cd SubjectsGII_Bot && python3 SubjectsGII_Bot.py
+web: gunicorn API_web:app --log-file=-
