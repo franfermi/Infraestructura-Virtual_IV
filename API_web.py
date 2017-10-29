@@ -6,17 +6,11 @@
 from flask import Flask
 
 app = Flask(__name__)
-PORT = 5000
-DEBUG = False
 #api = Api(app)
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def bienvenido():
     return ("Bienvenido al servicio web de SubjectsGII_Bot")
 
-@app.route(404)
-def not_found(error):
-    return "Not Found."
-
 if __name__ == "__main__":
-    app.run(port = PORT, debug = DEBUG)
+    app.run(debug = True, use_reloader = True)
