@@ -42,17 +42,17 @@ Los pasos a seguir para su despliegue son los siguientes:
 
 -Instalamos el cliente de heroku desde su propia página o mediante el siguiente comando:
 
-<code>wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+<code>wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh</code>
 
 -Una vez instalado, procedemos a autenticarnos en heroku.
 
-<code>heroku login
+<code>heroku login</code>
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/heroku_login.png)
 
 -Creamos la aplicación la cual vamos a desplegar.
 
-<code>heroku apps:create --region eu subjectsgii
+<code>heroku apps:create --region eu subjectsgii</code>
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/create_app_heroku.png)
 
@@ -64,13 +64,13 @@ Los pasos a seguir para su despliegue son los siguientes:
 
 -Para configurar el token de Telegram para su uso desde Heroku:
 
-<code>heroku config:set TOKEN=$$$$ --app subjectsgii
+<code>heroku config:set TOKEN=$$$$ --app subjectsgii</code>
 
 -Por último, lanzamos tanto el bot como el servicio web.
 
-<code>heroku ps:scale worker=1 --app subjectsgii
+<code>heroku ps:scale worker=1 --app subjectsgii</code>
 
-<code>heroku ps:scale web=1 --app subjectsgii
+<code>heroku ps:scale web=1 --app subjectsgii</code>
 
 -Comprobamos que están activos y funcionando.
 
