@@ -4,14 +4,19 @@
 #import json
 
 from flask import Flask
-from flask_restful import Api 
 
 app = Flask(__name__)
-api = Api(app)
+PORT = 5000
+DEBUG = False
+#api = Api(app)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def bienvenido():
     return ("Bienvenido al servicio web de SubjectsGII_Bot")
 
+@app.route(404)
+def not_found(error):
+    return "Not Found."
+
 if __name__ == "__main__":
-    app.run(debug = True, use_reloader = True)
+    app.run(port = PORT, debug = DEBUG)
