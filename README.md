@@ -77,3 +77,6 @@ Los pasos a seguir para su despliegue son los siguientes:
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/servicios_heroku.png)
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/worker_web_funcionando.png)
+
+* Servicio Web: https://subjectsgii.herokuapp.com/
+* Bot Telegram: @proyecto_iv_bot
