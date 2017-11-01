@@ -74,7 +74,7 @@ Los pasos a seguir para su despliegue son los siguientes:
 
 -Comprobamos que están activos y funcionando.
 
-![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/servicios_heroku.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/gunicorn_API_web.png)
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/worker_web_funcionando.png)
 
