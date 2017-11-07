@@ -4,10 +4,10 @@
 import os
 import psycopg2
 
-db = os.environ["NAME_BD"]
-host_db = os.environ["HOST_BD"]
-usuario = os.environ["USER_BD"]
-pw = os.environ["PW_BD"]
+db = os.environ['NAME_BD']
+host_db = os.environ['HOST_BD']
+usuario = os.environ['USER_BD']
+pw = os.environ['PW_BD']
 
 def conexionBD():
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
