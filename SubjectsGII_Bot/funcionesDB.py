@@ -2,21 +2,25 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sqlite3
-#import urlparse
+import psycopg2
+
+db = os.environ["NAME_BD"]
+host_db = os.environ["HOST_BD"]
+usuario = os.environ["USER_BD"]
+pw = os.environ["PW_BD"]
 
 def conexionBD():
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
 
     return cursor
 
 def nombreAsignatura(nombAsig):
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT * FROM AsignaturasGII WHERE asignaturas = 'DBA'")
+    cursor.execute("SELECT * FROM AsignaturasGII WHERE asignatura = 'TR'")
 
     num_asig = len(cursor.fetchall())
 
@@ -28,12 +32,12 @@ def nombreAsignatura(nombAsig):
     return False
 
 def guiaDocenteDisponible(nombAsig):
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
     asig = nombAsig
 
     #cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignatura = %s", [asig])
-    cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignaturas = 'SE'")
+    cursor.execute("SELECT guia_docente FROM AsignaturasGII WHERE asignatura = 'TR'")
 
     num_guia = len(cursor.fetchall())
 
@@ -45,11 +49,11 @@ def guiaDocenteDisponible(nombAsig):
     return False
 
 def fechaExamenDisponible(nombAsig):
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
     asig = nombAsig
 
-    cursor.execute("SELECT fecha_examen FROM AsignaturasGII WHERE asignaturas = 'CPD'")
+    cursor.execute("SELECT fecha_examen FROM AsignaturasGII WHERE asignatura = 'TR'")
 
     num_fecha = len(cursor.fetchall())
 
@@ -61,7 +65,7 @@ def fechaExamenDisponible(nombAsig):
     return False
 
 def numeroAsigDisponibles():
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
     cursor.execute("SELECT * FROM AsignaturasGII")
 
@@ -72,9 +76,9 @@ def numeroAsigDisponibles():
     return num_asignaturas
 
 def mostrarAsigDisponibles():
-    connect_db = sqlite3.connect('AsignaturasGII.db')
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
-    cursor.execute("SELECT asignaturas FROM AsignaturasGII")
+    cursor.execute("SELECT asignatura FROM AsignaturasGII")
 
     filas = len(cursor.fetchall())
 
