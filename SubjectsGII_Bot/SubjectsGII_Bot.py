@@ -2,7 +2,7 @@
 
 import os
 import telebot
-#import funcionesDB
+import funcionesDB
 
 TOKEN = os.environ['TOKEN']
 bot = telebot.TeleBot(TOKEN)
