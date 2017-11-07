@@ -2,7 +2,7 @@
 
 import os
 import telebot
-import funcionesDB
+#import funcionesDB
 
 TOKEN = os.environ['TOKEN']
 bot = telebot.TeleBot(TOKEN)
@@ -26,4 +26,4 @@ def comando_hola(message):
     chat_id = message.chat.id
     bot.send_message(chat_id, "Hasta pronto!")
 
-bot.polling(none_stop=True) 
+bot.polling(none_stop=True)
