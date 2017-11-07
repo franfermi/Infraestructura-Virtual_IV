@@ -22,7 +22,7 @@ Los datos sobre cada una de las asignaturas de alojarán en algún sitio.
 
 ## Servicios
 
-* Base de datos SQLite.
+* Base de datos Postgres.
 
 * API Bot Telegram para la comunicación.
 
