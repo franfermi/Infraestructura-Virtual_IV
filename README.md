@@ -62,6 +62,20 @@ Los pasos a seguir para su despliegue son los siguientes:
 * [runtime.txt](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/runtime.txt), especificamos la versión de python utilizada.
 * [requierements.txt](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/requirements.txt), añadimos las dependencias de nuestro proyecto.
 
+-Desplegamos Github desde Heroku para un despliegue automático:
+
+En la opción de despliegue de Heroku, en métodos de despliegue seleccionamos la opción Github.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/metodo_despliegue.png)
+
+Conectamos nuestro repositorio Github en el cual se encuentra nuestro proyecto.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/conexi%C3%B3n_github.png)
+
+Por último activamos el despliegue automático y activamos la opción de que antes de desplegar debe de pasar el test de Travis.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/despligue_aut_Travis.png)
+
 -Para configurar el token de Telegram para su uso desde Heroku:
 
 <code>heroku config:set TOKEN=$$$$ --app subjectsgii</code>
