@@ -97,3 +97,13 @@ Por último activamos el despliegue automático y activamos la opción de que an
 * Bot Telegram: @proyecto_iv_bot
 
 Despliegue https://subjectsgii.herokuapp.com/
+
+## Despliegue en Docker
+
+Para desplegar nuestro proyecto en [Docker](https://www.docker.com/), nos creamos una cuenta y un repositorio, a este último le asociaremos nuestro proyecto de Github.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/repositorio_docker.png)
+
+Como siguiente paso sería activar las compilaciones automáticas, para que cada vez que hagamos push se compile también en Docker.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/build_configurations.png)
