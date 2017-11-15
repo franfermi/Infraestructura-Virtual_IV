@@ -104,7 +104,7 @@ Para desplegar nuestro proyecto en [Docker](https://www.docker.com/), nos creamo
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/repositorio_docker.png)
 
-Como siguiente paso sería activar las compilaciones automáticas, para que cada vez que hagamos push se compile también en Docker.
+Como siguiente paso sería activar las compilaciones automáticas, para que cada vez que hagamos <code>push</code> se compile también en Docker.
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/build_configurations.png)
 
@@ -115,3 +115,9 @@ Una vez configurado correctamente incluyendo las variables de entorno para el ac
 Para comprobar que todo ha ido correctamente, se mostrará lo siguiente:
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/despliegue_Docker.png)
+
+Ya está todo listo para descargar nuestro contenedor con el comando:
+
+<code>sudo docker build -t subjectsgii_bot ./</code>
+
+(Para no hacer uso de "sudo" debemos de seguir el siguiente [tutorial](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user) proporcionado por el profesor).
