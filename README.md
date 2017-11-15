@@ -107,3 +107,11 @@ Para desplegar nuestro proyecto en [Docker](https://www.docker.com/), nos creamo
 Como siguiente paso sería activar las compilaciones automáticas, para que cada vez que hagamos push se compile también en Docker.
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/build_configurations.png)
+
+Para el despliegue necesitaremos añadir a nuestro repositorio el archivo [Dockerfile](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/Dockerfile), (pinchando en el enlace podemos ver su contenido).
+
+Una vez configurado correctamente incluyendo las variables de entorno para el accceso a la BD y el token para el bot de Telegram, Docker comenzará a construir un contenedor con los comandos que se encuentran en el archivo.
+
+Para comprobar que todo ha ido correctamente, se mostrará lo siguiente:
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/despliegue_Docker.png)
