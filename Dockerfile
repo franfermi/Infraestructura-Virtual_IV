@@ -19,5 +19,5 @@ ENV TOKEN=$TOKEN
 RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN apt-get install -y git
-RUN git clone git@github.com:franfermi/Infraestructura-Virtual_IV.git
+RUN git clone https://github.com/franfermi/Infraestructura-Virtual_IV.git
 RUN cd Infraestructura-Virtual_IV/ && pip3 install -r requirements.txt
