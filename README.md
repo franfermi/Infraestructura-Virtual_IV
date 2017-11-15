@@ -121,3 +121,11 @@ Ya está todo listo para descargar nuestro contenedor con el comando:
 <code>sudo docker build -t subjectsgii_bot ./</code>
 
 (Para no hacer uso de "sudo" debemos de seguir el siguiente [tutorial](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user) proporcionado por el profesor).
+
+Una vez descargada la imagen de Docker podemos comprobar que realmente se encuentra con:
+
+<code>docker images</code>
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/imagen_docker.png)
+
+Contenedor: https://hub.docker.com/r/franfermi/subjectsgii_bot/
