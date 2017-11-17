@@ -33,4 +33,9 @@ def comando_numAsig(message):
     res = funcionesDB.numeroAsigDisponibles()
     bot.send_message(chat_id, res)
 
+@bot.message_handler(commands=['ayuda'])
+def comando_ayuda(message):
+    chat_id = message.chat.id
+	bot.send_message(chat_id, "Lista de comandos implementados: \n\n/hola - Comando de inicio\n\n/adios - Comando de despedida\n\n/num_asignaturas - Número de asignaturas almacenadas\n\n")
+
 bot.polling(none_stop=True)
