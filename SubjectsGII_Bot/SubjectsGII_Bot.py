@@ -26,4 +26,11 @@ def comando_hola(message):
     chat_id = message.chat.id
     bot.send_message(chat_id, "Hasta pronto!")
 
+@bot.message_handler(commands=['num_asignaturas'])
+def comando_numAsig(message):
+    """Función que muestra el número de asignaturas almacenadas. """
+    chat_id = message.chat.id
+    res = funcionesDB.numeroAsigDisponibles()
+    bot.send_message(chat_id, res)
+
 bot.polling(none_stop=True)
