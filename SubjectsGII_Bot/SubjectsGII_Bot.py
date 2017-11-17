@@ -9,7 +9,7 @@ bot = telebot.TeleBot(TOKEN)
 
 commands = { # command description used in the "ayuda" command
     'hola': 'Comando de inicio',
-    'adios': 'Comando de despedida'
+    'adios': 'Comando de despedida',
     'ayuda': 'Da informacion sobre los comandos disponibles',
     'num_asignaturas': 'Número de asignaturas almacenadas'
 }
