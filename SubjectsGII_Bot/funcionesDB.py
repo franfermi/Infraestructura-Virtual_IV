@@ -80,7 +80,7 @@ def mostrarAsigDisponibles():
     cursor = connect_db.cursor()
     cursor.execute("SELECT asignatura FROM AsignaturasGII")
     asigs = ""
-    nums = len(cursor.fetchall())
+    nums = cursor.fetchall()
 
     for i in nums:
         asigs += str(i[1]) + " " + str(i[2]) + " " + str(i[3]) + " " + str(i[4]) + "\n"

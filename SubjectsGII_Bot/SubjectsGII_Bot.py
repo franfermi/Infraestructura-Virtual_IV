@@ -11,7 +11,8 @@ commands = { # command description used in the "ayuda" command
     'hola': 'Comando de inicio',
     'adios': 'Comando de despedida',
     'ayuda': 'Da informacion sobre los comandos disponibles',
-    'num_asignaturas': 'Número de asignaturas almacenadas'
+    'num_asignaturas': 'Número de asignaturas almacenadas',
+    'asig_disponibles': 'Asignaturas almacenadas'
 }
 
 def listener(messages):
