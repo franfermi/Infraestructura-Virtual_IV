@@ -25,7 +25,7 @@ bot.set_update_listener(listener)
 def comando_hola(message):
     """Función de bienvenida al bot de Telegram. """
     chat_id = message.chat.id
-    bot.send_message(chat_id, "Bienvenid@ al canal de SubjectsGII")
+    bot.send_message(chat_id, "Bienvenid@ al canal de SubjectsGII, use el comando /ayuda para más información")
 
 @bot.message_handler(commands=['adios'])
 def comando_hola(message):
@@ -38,6 +38,13 @@ def comando_numAsig(message):
     """Función que muestra el número de asignaturas almacenadas. """
     chat_id = message.chat.id
     res = funcionesDB.numeroAsigDisponibles()
+    bot.send_message(chat_id, res)
+
+@bot.message_handler(commands=['asig_disponibles'])
+def comando_asigDisponibles(message):
+    """Función que muestra las asignaturas almacenadas. """
+    chat_id = message.chat.id
+    res = funcionesDB.mostrarAsigDisponibles()
     bot.send_message(chat_id, res)
 
 @bot.message_handler(commands=['ayuda'])

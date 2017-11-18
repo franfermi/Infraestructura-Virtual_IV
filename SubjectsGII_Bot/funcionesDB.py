@@ -79,10 +79,10 @@ def mostrarAsigDisponibles():
     connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
     cursor = connect_db.cursor()
     cursor.execute("SELECT asignatura FROM AsignaturasGII")
+    asigs = ""
+    nums = len(cursor.fetchall())
 
-    filas = len(cursor.fetchall())
-
-    for i in filas:
+    for i in nums:
         asigs += str(i[1]) + " " + str(i[2]) + " " + str(i[3]) + " " + str(i[4]) + "\n"
 
     connect_db.close()
