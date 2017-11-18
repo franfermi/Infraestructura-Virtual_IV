@@ -83,7 +83,7 @@ def mostrarAsigDisponibles():
     nums = cursor.fetchall()
 
     for i in nums:
-        asigs += str(i[1]) + " " + str(i[2]) + " " + str(i[3]) + " " + str(i[4]) + "\n"
+        asigs += str(i) + "\n"
 
     connect_db.close()
 
