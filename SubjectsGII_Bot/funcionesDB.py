@@ -88,3 +88,17 @@ def mostrarAsigDisponibles():
     connect_db.close()
 
     return asigs
+
+def mostrarTodo():
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    cursor = connect_db.cursor()
+    cursor.execute("SELECT * FROM AsignaturasGII")
+    asigs = ""
+    f = cursor.fetchall()
+
+    for c in f:
+        asigs += str(c[1]) + " " + str(c[2]) + " " + str(c[3]) + " " + str(c[4]) + "\n"
+
+    connect_db.close()
+
+    return asigs

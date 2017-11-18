@@ -12,7 +12,8 @@ commands = { # command description used in the "ayuda" command
     'adios': 'Comando de despedida',
     'ayuda': 'Da informacion sobre los comandos disponibles',
     'num_asignaturas': 'Número de asignaturas almacenadas',
-    'asig_disponibles': 'Asignaturas almacenadas'
+    'asig_disponibles': 'Asignaturas almacenadas',
+    'mostrar_todo': 'Muestra toda la información almacenada'
 }
 
 def listener(messages):
@@ -46,6 +47,13 @@ def comando_asigDisponibles(message):
     """Función que muestra las asignaturas almacenadas. """
     chat_id = message.chat.id
     res = funcionesDB.mostrarAsigDisponibles()
+    bot.send_message(chat_id, res)
+
+@bot.message_handler(commands=['mostrar_todo'])
+def comando_asigDisponibles(message):
+    """Función que muestra toda la información almacenada. """
+    chat_id = message.chat.id
+    res = funcionesDB.mostrarTodo()
     bot.send_message(chat_id, res)
 
 @bot.message_handler(commands=['ayuda'])
