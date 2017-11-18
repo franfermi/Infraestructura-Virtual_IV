@@ -97,7 +97,7 @@ def mostrarTodo():
     f = cursor.fetchall()
 
     for c in f:
-        asigs += str(c[1]) + " " + str(c[2]) + " " + str(c[3]) + " " + str(c[4]) + "\n"
+        asigs += str(c[0]) + " " + str(c[1]) + " " + str(c[2]) + " " + str(c[3]) + "\n"
 
     connect_db.close()
 
