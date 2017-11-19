@@ -21,3 +21,7 @@ RUN apt-get install -y python3-pip
 RUN apt-get install -y git
 RUN git clone https://github.com/franfermi/Infraestructura-Virtual_IV.git
 RUN cd Infraestructura-Virtual_IV/ && pip3 install -r requirements.txt
+
+EXPOSE 8000
+WORKDIR Infraestructura-Virtual_IV/
+CMD gunicorn API_web:app --log-file=- --bind 0.0.0.0:8000
