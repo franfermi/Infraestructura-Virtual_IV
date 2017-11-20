@@ -129,3 +129,27 @@ Una vez descargada la imagen de Docker podemos comprobar que realmente se encuen
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/imagen_docker.png)
 
 Contenedor: https://hub.docker.com/r/franfermi/subjectsgii_bot/
+
+## Despliegue en Azure
+
+El despliegue en [Azure](https://azure.microsoft.com/es-es/) lo he realizado mediante Azure Cloud Shell que es un shell de Bash que se puede ejecutar directamente en Azure Portal.
+
+El primer paso sería crear un grupo de recursos en el cual se implementan y administran los recursos de las aplicaciones desarrolladas.
+
+<code>az group create --name proyectoIV --location "West Europe"</code>
+
+El segundo paso es crear un plan de App Service de Linux, en mi caso he utilizado un plan de precios estándar en un contenedor Linux.
+
+<code>az appservice plan create --name AppServicePlan --resource-group proyectoIV --sku S1 --is-linux</code>
+
+Como tercer paso, creamos la aplicación web en el plan de servicio creado, en este paso tenemos que añadir la imagen de nuestro contenedor, para ello indicamos su *docker-ID* seguido del nombre de la imagen.
+
+<code>az webapp create --resource-group proyectoIV --plan AppServicePlan --name subjectsgiibot --deployment-container-image-name 422e56bd4839/subjectsgii_bot</code>
+
+Por último, configuramos las variables de entorno que en este caso será el puerto que usará la aplicación, para no tener conflictos con el puerto 80, he utilizado el puerto 8000.
+
+<code>az webapp config appsettings set --resource-group proyectoIV --name subjectsgiibot --settings WEBSITES_PORT=8000</code>
+
+Servicio web desplegado:
+
+![curl]()
