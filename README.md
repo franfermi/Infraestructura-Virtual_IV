@@ -152,4 +152,6 @@ Por último, configuramos las variables de entorno que en este caso será el pue
 
 Servicio web desplegado:
 
-![curl]()
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/azure_funcionando.jpg)
+
+Despliegue Azure: http://subjectsgiibot.azurewebsites.net/
