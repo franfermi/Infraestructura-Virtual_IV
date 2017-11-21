@@ -3,30 +3,22 @@
 #from flask_restful import Resource, Api
 #import json
 
-from flask import Flask
+from flask import Flask, request, jsonify
 import os
 import json
 
 app = Flask(__name__)
-#api = Api(app)
+
 
 {
    "status": "OK"
 }
 
-"""
-{
-   "status": "OK",
-   "ejemplo": { "ruta": "/ruta/parametro",
-                "valor": "{JSON: devuelto}"
-              }
-}
-"""
+
 
 @app.route("/")
-def bienvenido():
-    data = {"status": "OK"}
-    return json.dumps(data)
+def principal():
+    return jsonify(status='OK')
 
 """
 @app.errorhandler(404)
