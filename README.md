@@ -128,7 +128,7 @@ Una vez descargada la imagen de Docker podemos comprobar que realmente se encuen
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/imagen_docker.png)
 
-Contenedor: https://hub.docker.com/r/franfermi/subjectsgii_bot/
+Repositorio en DockerHub: https://hub.docker.com/r/franfermi/subjectsgii_bot/
 
 ## Despliegue en Azure
 
@@ -154,4 +154,4 @@ Servicio web desplegado:
 
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/azure_funcionando.jpg)
 
-Despliegue Azure: http://subjectsgiibot.azurewebsites.net/
+Contenedor: https://subjectsgiibot.azurewebsites.net/
