@@ -36,7 +36,7 @@ El sistema de integración continua que he utilizado es *Travis-CI*, enlazado co
 
 ## Despliegue en un PaaS
 
-El despliegue de mi proyecto lo he realizado en [Heroku](https://www.heroku.com/).
+Para mi proyecto he empleado el PaaS [Heroku](https://www.heroku.com/).
 
 Los pasos a seguir para su despliegue son los siguientes:
 
