@@ -20,6 +20,10 @@ app = Flask(__name__)
 def principal():
     return jsonify(status='OK')
 
+@app.route("/status")
+def docker():
+    return jsonify(status='OK')
+
 """
 @app.errorhandler(404)
 def not_found():
