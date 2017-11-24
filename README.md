@@ -4,7 +4,9 @@
 
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=franfermi&repository=subjectsgii_bot)
+![Docker: OK](https://dockerbuildbadges.quelltext.eu/status.svg?organization=franfermi&repository=subjectsgii_bot)
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 # SubjectsGII_Bot
 
