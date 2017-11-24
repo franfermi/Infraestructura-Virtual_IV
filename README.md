@@ -2,6 +2,10 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/apps/subjectsgii)
 
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+
+![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=franfermi&repository=subjectsgii_bot)
+
 # SubjectsGII_Bot
 
 ## Descripción general
