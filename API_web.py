@@ -3,7 +3,7 @@
 #from flask_restful import Resource, Api
 #import json
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import os
 import json
 
@@ -14,8 +14,6 @@ app = Flask(__name__)
    "status": "OK"
 }
 
-
-
 @app.route("/")
 def principal():
     return jsonify(status='OK')
@@ -23,6 +21,20 @@ def principal():
 @app.route("/status")
 def docker():
     return jsonify(status='OK')
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
+"""
+Sólo para prueba
+"""
+@app.route("/comprobarComando", methods=['POST'])
+def compComando():
+    return render_template("index.html")
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('http_404.html')
 
 """
 @app.errorhandler(404)
