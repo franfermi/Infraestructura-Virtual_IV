@@ -6,6 +6,7 @@
 from flask import Flask, request, jsonify, render_template
 import os
 import json
+import psycopg2
 
 app = Flask(__name__)
 
@@ -13,6 +14,27 @@ app = Flask(__name__)
 {
    "status": "OK"
 }
+
+db = os.environ['NAME_BD']
+host_db = os.environ['HOST_BD']
+usuario = os.environ['USER_BD']
+pw = os.environ['PW_BD']
+
+
+def buscarAsignatura(nombAsig):
+    connect_db = psycopg2.connect(database=db, user=usuario, password=pw, host=host_db)
+    cursor = connect_db.cursor()
+
+    cursor.execute("SELECT * FROM AsignaturasGII WHERE asignatura LIKE %s", [nombAsig])
+    asigs = ""
+    f = cursor.fetchall()
+
+    for c in f:
+        asigs += str(c[0]) + " " + str(c[1]) + " " + str(c[2]) + " " + str(c[3]) + "\n"
+
+    connect_db.close()
+
+    return asigs
 
 @app.route("/")
 def principal():
@@ -25,12 +47,13 @@ def docker():
 @app.route("/index")
 def index():
     return render_template("index.html")
-"""
-Sólo para prueba
-"""
-@app.route("/comprobarComando", methods=['POST'])
-def compComando():
-    return render_template("index.html")
+
+@app.route("/busqueda", methods=['POST'])
+def busqueda():
+	asig = request.form['asignatura']
+	res = buscarAsignatura(asig)
+
+	return render_template("result.html", resultado=res)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -45,3 +68,4 @@ def not_found():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug = True, use_reloader = True)
+
