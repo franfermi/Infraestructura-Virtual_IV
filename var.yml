@@ -1,0 +1,13 @@
+---
+
+# Variables para el despliegue
+project_name: Infraestructura-Virtual_IV
+project_repo: https://github.com/franfermi/Infraestructura-Virtual_IV.git
+proyect_path: SubjectsGII_Bot
+
+# Dependencias del sistema
+system_packages:
+  - build-essential
+  - npm
+  - nodejs-legacy
+  - git
