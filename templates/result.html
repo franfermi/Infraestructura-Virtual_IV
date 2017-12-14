@@ -14,9 +14,16 @@
 			          </tr>
 			        </thead>
 			        <tbody class="resultados">
+						{% if resultado %}
 			            <tr>
 			              <td> {{ resultado }} </td>
 			            </tr>
+						{% endif %}
+						{% if not resultado %}
+			            <tr>
+			              <td>No se ha obtenido ningún resultado, revisa que las siglas sean correctas.</td>
+			            </tr>
+						{% endif %}
 			        </tbody>
 			      </table>
 					
