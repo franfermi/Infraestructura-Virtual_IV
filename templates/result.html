@@ -15,9 +15,11 @@
 			        </thead>
 			        <tbody class="resultados">
 						{% if resultado %}
-			            <tr>
-			              <td> {{ resultado }} </td>
-			            </tr>
+							{% for rest in resultado %}
+				            <tr onMouseOver=this.style.backgroundColor='grey'; onMouseOut=this.style.backgroundColor=''>
+				              <td> {{ rest }} </td>
+				            </tr>
+				            {% endfor %}
 						{% endif %}
 						{% if not resultado %}
 			            <tr>
@@ -32,3 +34,4 @@
 		</div><!-- container -->
 
 {% endblock content %}
+

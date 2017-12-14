@@ -26,15 +26,23 @@ def buscarAsignatura(nombAsig):
     cursor = connect_db.cursor()
 
     cursor.execute("SELECT * FROM AsignaturasGII WHERE asignatura LIKE %s", [nombAsig])
-    asigs = ""
+    asig = gDocen = fExam = hTeo = ""
+    vAsig = []
     f = cursor.fetchall()
 
     for c in f:
-        asigs += str(c[0]) + " " + str(c[1]) + " " + str(c[2]) + " " + str(c[3]) + "\n"
+        asig = "-Asignatura: " + str(c[0]) 
+        vAsig.append(asig)
+        gDocen = " -Guía docente: " + str(c[1])
+        vAsig.append(gDocen)
+        fExam = " -Fecha exámen final: " + str(c[2]) 
+        vAsig.append(fExam)
+        hTeo  = " -Horario teoría: " + str(c[3])
+        vAsig.append(hTeo)
 
     connect_db.close()
 
-    return asigs
+    return vAsig
 
 @app.route("/")
 def principal():
@@ -68,4 +76,5 @@ def not_found():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug = True, use_reloader = True)
+
 
