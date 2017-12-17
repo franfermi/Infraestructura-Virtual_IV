@@ -29,7 +29,7 @@ Y por último, instalamos el plugin de Azure para Vagrant:
 
 <code>vagrant plugin install vagrant-azure</code>
 
-![curl](1.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/plugin_azure.png)
 
 ### Instalar Ansible
 
@@ -100,7 +100,7 @@ Una vez tengamos una cuenta activa en Azure, procedemos a instalar el cliente en
 
 <code>sudo npm install -g azure-cli</code>
 
-![curl](3.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/azure_cli.png)
 
 Ahora ya podemos hacer login desde nuestra terminal.
 
@@ -108,43 +108,43 @@ Ahora ya podemos hacer login desde nuestra terminal.
 
 Al hacer login se nos proporciona un código, dicho código debemos de introducirlo en la web de Azure para verificar la autentificación.
 
-![curl](4.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/azure_login.png)
 
 Entramos en modo *asm*, es el modo de gestión de servicios de Azure.
 Esto lo realizamos para poder descargamos el archivo publishSettings.
 
-![curl](5.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/mode_asm.png)
 
 Descargamos el archivo con <code>azure account download</code>.
 
-![curl](6.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/account_down.png)
 
 Y por último, importamos el archivo descargado a nuestra cuenta Azure.
 
 <code>azure account import ./Pase para Azure-11-28-2017-credentials.publishSettings</code>
 
-![curl](7.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/publicSettings.png)
 
 Una vez tengamos los fichero necesarios, obtenemos los certificados de seguridad.
 
 <code>openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout azurevagrant.key -out azurevagrant.key</code>
 
-![curl](8.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/cert1.png)
 
 ~~~
 chmod 600 azurevagrant.key
 openssl x509 -inform pem -in azurevagrant.key -outform der -out azurevagrant.cer
 ~~~
 
-![curl](9,10.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/cert2.png)
 
 Tras estos pasos, hemos obtenido un fichero .cer que será nuestro certificado. Acto siguiente será subirlo a nuestra cuenta de Azure, en certificados de administración.
 
-![curl](11.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/cert_azure.png)
 
 Llegados a este punto ya podemos registrar nuestra nueva aplicación en Azure Active Directory.
 
-![curl](registro_app.png)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/registro_app.png)
 
 Ya tenemos nuestra aplicación creada, ahora si hacemos click en ella podemos obtener la información que necesitaremos para configurar el fichero Vagrantfile, los datos que necesitamos son los siguientes:
 
@@ -209,17 +209,17 @@ Para realizar la instalación de nuestra máquina, usamos vagrant con nuestro Va
 
 Una vez terminado el proceso de instalación, nos vamos a Azure y comprobamos que efectivamente se ha creado la máquina virtual.
 
-![curl](maquina_creada)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/maquina_creada.png)
 
 ### Establecer puertos y dominios
 
 Una vez creada nuestra máquina virtual, le abrimos el puerto 80 en la configuración de red de nuestra máquina.
 
-![curl](puerto_abierto)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/puerto_abierto.png)
 
 Para finalizar, cambiamos el nombre del dominio.
 
-![curl](config_dns)
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/config_dns.png)
 
 
 ### Configurar fichero fabfile.py
@@ -264,4 +264,4 @@ Un ejemplo de funcionamiento sería:
 <code>fab -H vagrant@subjectsgii.southcentralus.cloudapp.azure.com IniciarApp
 </code>
 
-![culr](servicio_funcionando)
+![culr](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/servicio_funcionando.png)
