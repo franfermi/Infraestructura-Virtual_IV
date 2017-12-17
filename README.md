@@ -161,3 +161,65 @@ Servicio web desplegado:
 ![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/azure_funcionando.jpg)
 
 Contenedor: https://subjectsgiibot.azurewebsites.net/
+
+## Diseño del soporte virtual para el despliegue de una aplicación
+
+El despliegue de la aplicación en IaaS, lo he realizado mediante la herramienta de despliegue automático [Vagrant](https://www.vagrantup.com/).
+
+Esta herramienta se encargará de desplegar una máquina virtual que he creado en [Azure](https://azure.microsoft.com/es-es/?&WT.srch=1&wt.mc_id=AID623300_SEM_QwnrSFdW&gclid=Cj0KCQiAyNjRBRCpARIsAPDBnn0DULNnhzu_rpdyCiA0384sQUnFqJTI7rArRWFSfik1ZiTu56oi-uoaAsQeEALw_wcB) con el código promocional proporcionado por el profesor.
+
+He seguido los siguientes pasos para el despliegue:
+
+* Instalar Vagrant.
+* Instalar Ansible.
+* Configurar fichero *var.yml*.
+* Configurar fichero *playbook.yml*.
+* Configurar fichero *ansible.cfg*.
+* Creación  y configuración de aplicación en Azure.
+* Configurar fichero *Vagrantfile*.
+* Instalación de la máquina virtual.
+* Establecer puertos y dominios.
+* Configurar fichero *fabfile.py*.
+
+La explicación con detalle de los pasos que he seguido para el despliegue se encuentran en:
+
+[Documentación Hito 5](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/Documentaci%C3%B3n_final.md)
+
+El contenido de los ficheros utilizados para el despliegue son:
+
+[var.yml](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/var.yml)
+
+[playbook.yml](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/provision/playbook.yml)
+
+[ansible.cfg](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/ansible.cfg)
+
+[Vagrantfile](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/Vagrantfile)
+
+Para el despliegue he utilizado Fabric y he configurado varias opciones en el fichero fabfile.py para que se puedan realizar remotamente.
+
+[fabfile.py](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/despliegue/fabfile.py)
+
+Para realizar la instalación de nuestra máquina, usamos vagrant con nuestro Vagrantfile configurado.
+
+<code>vagrant up --provider=azure</code>
+
+Una vez terminado el proceso de instalación, nos vamos a Azure y comprobamos que efectivamente se ha creado la máquina virtual.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/maquina_creada.png)
+
+Una vez creada nuestra máquina virtual, le abrimos el puerto 80 en la configuración de red de nuestra máquina.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/puerto_abierto.png)
+
+Para finalizar, cambiamos el nombre del dominio.
+
+![curl](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/config_dns.png)
+
+Un ejemplo de funcionamiento sería:
+
+<code>fab -H vagrant@subjectsgii.southcentralus.cloudapp.azure.com IniciarApp
+</code>
+
+![culr](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/servicio_funcionando.png)
+
+Despliegue final: subjectsgii.southcentralus.cloudapp.azure.com
