@@ -23,6 +23,6 @@ def BorrarApp():
 def IniciarApp():
 	""" Función para iniciar la web. """
 	# Importamos las variables globales
-	with shell_env(HOST_BD=os.environ['HOST_BD'], USER_BD=os.environ['USER_BD'], PW_BD=os.environ['PW_BD'], NAME_BD=os.environ['NAME_BD']):
+	with shell_env(HOST_BD="ec2-54-247-81-97.eu-west-1.compute.amazonaws.com", USER_BD="kteqeodcirfqvw", PW_BD="3ebd9387410d8aa87910d06e9976392ea4108ca9c91df01603e3ee7ceadf1c66", NAME_BD="d7qsuf34inh34t"):
 		# Iniciamos el servicio web
-		run('cd Infraestructura-Virtual_IV/ && python3 API_web.py')
+		run('cd ~/Infraestructura-Virtual_IV/ && sudo -E python3 API_web.py',pty=False)
