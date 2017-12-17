@@ -18,10 +18,10 @@ Vagrant.configure('2') do |config|
     azure.tcp_endpoints = '80:80'
     azure.vm_name = "maquinaSubjectsGII"
     azure.resource_group_name= "subjectsgiibot"
-    azure.tenant_id = ENV['AZURE_TENANT_ID']
-    azure.client_id = ENV['AZURE_CLIENT_ID']
-    azure.client_secret = ENV['AZURE_CLIENT_SECRET']
-    azure.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
+    azure.tenant_id = "68c2006f-1c69-4334-a449-fbef01ac9b79"
+    azure.client_id = "c1cc5441-f52e-481c-ab17-415f88c0afdd"
+    azure.client_secret = "Mty17mZFgyVyvQZVyduHXF4RtpHtrbm1V9xGWsjmjq8="
+    azure.subscription_id = "f5ad611a-c006-4caf-8ef7-137903b02e5e"
   end
 
   # Provisionar con ansible
