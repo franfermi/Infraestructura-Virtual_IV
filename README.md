@@ -222,4 +222,4 @@ Un ejemplo de funcionamiento sería:
 
 ![culr](https://github.com/franfermi/Infraestructura-Virtual_IV/blob/master/docs/img/servicio_funcionando.png)
 
-Despliegue final: subjectsgii.southcentralus.cloudapp.azure.com
+Despliegue final: http://subjectsgii.southcentralus.cloudapp.azure.com/
